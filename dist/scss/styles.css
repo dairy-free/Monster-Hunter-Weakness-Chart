@@ -19,13 +19,39 @@ body {
   position: fixed;
   z-index: 1;
   top: 20px;
-  left: 10px;
+  left: 5%;
   overflow-x: hidden;
   overflow-y: hidden;
+  font-size: 1.4rem;
 }
 
 .alphabet-sidebar p {
   width: 1%;
+}
+
+.search-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.search-bar-container .form-control {
+  width: 60%;
+}
+
+.search-bar-container .fa-search {
+  cursor: pointer;
+  padding-right: 1rem;
 }
 
 .monster-images {
@@ -33,22 +59,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 2rem;
+  padding: 5rem;
 }
 
 .monster-image {
   width: 200px;
+  height: 200px;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.monster-title {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.monster-title a:link,
+.monster-title a:hover,
+.monster-title a:active,
+.monster-title a:visited {
+  color: black;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
