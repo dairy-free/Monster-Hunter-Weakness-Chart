@@ -46,12 +46,17 @@ body {
   height: 200px;
   min-height: 200px;
   min-width: 200px;
+  padding-bottom: 0.5rem;
 }
 
 .monster-title {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+}
+
+.monster-title p {
+  padding-bottom: 1rem;
 }
 
 .monster-title a:link,

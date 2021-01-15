@@ -1,9 +1,9 @@
-fetch('https://mhw-db.com/monsters')
-  .then(res => res.json())
-  .then(data => console.log(data))
-  
-fetch('https://mhw-db.com/monsters/24')
-  .then(res => res.json())
-  .then(data => console.log(data))
+const apiUrl = "https://mhw-db.com/monsters";
 
-  let obj = {};
+async function getMonster(monster) {
+  const res = await fetch(`${apiUrl}/22`);
+  const data = await res.json();
+  console.log(data);
+}
+
+  getMonster();
