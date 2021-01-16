@@ -7,3 +7,10 @@ async function getMonster(monster) {
 }
 
   getMonster();
+
+  // Selectors 
+  // insert selector for image here
+  const monsterTitle = document.querySelectorAll('.monster-name')[0];
+  const monsterWeakness = document.querySelectorAll('.monster-weakness')[0];
+  console.log(monsterWeakness);
+  console.log(monsterTitle);
