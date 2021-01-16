@@ -1,10 +1,6 @@
 const apiUrl = "https://mhw-db.com/monsters";
 
-async function getMonster(monster) {
-  const res = await fetch(`${apiUrl}/22`);
-  const data = await res.json();
-  console.log(data);
-
+async function getMonster() {
   const url = new URL('https://mhw-db.com/monsters');
   url.searchParams.set('p', JSON.stringify({
     id: true,
@@ -13,14 +9,11 @@ async function getMonster(monster) {
     weaknesses: true,
 }));
 
-fetch(url)
-    .then(response => response.json())
-    .then(weapons => {
-      console.log(weapons)
-    });
+  const res = await fetch(url)
+    const data = await res.json()
+    console.log(data);
 
-
-
+  
 }
 
   getMonster();
