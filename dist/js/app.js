@@ -33,13 +33,13 @@ async function getMonster() {
 function updateMonsterData(monsterData) {
   monsterImage.innerHTML = ``;
   monsterName.innerHTML = `${monsterData.name}`;
-  monsterWeakness.innerHTML = `<p>${monsterData.weaknesses.element}${monsterData.weaknesses.stars}</p>`;
+  
   // For loop for each element 
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
-    //working for element objects
-    console.log(monsterData.weaknesses[i].element)
-    console.log(monsterData.weaknesses[i].stars)
-    
+    let paraNode = document.createElement('p');
+    let monsterWeaknessNode = document.createTextNode(`${monsterData.weaknesses[i].element} ${monsterData.weaknesses[i].stars}`);
+    paraNode.appendChild(monsterWeaknessNode);
+    monsterWeakness.appendChild(paraNode);
   }
   
 
