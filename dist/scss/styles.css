@@ -93,4 +93,24 @@ body {
 .landing-page-container p {
   font-size: 1.3rem;
 }
+
+.monster-weakness ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.monster-weakness ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  padding-right: 0.5rem;
+  margin: 0;
+}
 /*# sourceMappingURL=styles.css.map */

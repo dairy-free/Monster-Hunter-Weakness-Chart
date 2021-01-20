@@ -1,5 +1,5 @@
 const apiUrl = "https://mhw-db.com/monsters";
-const monster = `Anjanath`;
+let monster = `Anjanath`;
 let testMonsterName = [];
 
 // Selectors 
@@ -31,15 +31,17 @@ async function getMonster() {
 
 
 function updateMonsterData(monsterData) {
-  monsterImage.innerHTML = ``;
+  monsterImage.innerHTML = `<a href="#"><img src="./images/MHW_${monster}_Icon.png" alt="" class="monster-image monster-lp-image"></a>`;
   monsterName.innerHTML = `${monsterData.name}`;
   
-  // For loop for each element 
+  // For loop for each weakness 
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
     let paraNode = document.createElement('p');
     let monsterWeaknessNode = document.createTextNode(`${monsterData.weaknesses[i].element} ${monsterData.weaknesses[i].stars}`);
     paraNode.appendChild(monsterWeaknessNode);
     monsterWeakness.appendChild(paraNode);
+    let paraElement = document.querySelectorAll('.monster-weakness p');
+    console.log(paraElement)
   }
   
 
