@@ -6,6 +6,7 @@ let testMonsterName = [];
 const monsterImage = document.querySelectorAll('.monster-image-lp')[0];
 const monsterName = document.querySelectorAll('.monster-name')[0];
 const monsterWeakness = document.querySelectorAll('.monster-weakness')[0];
+let monsterWeaknessUl = document.querySelectorAll('.monster-weakness-ul')[0];
 
 
 async function getMonster() {
@@ -36,12 +37,17 @@ function updateMonsterData(monsterData) {
   
   // For loop for each weakness 
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
-    let paraNode = document.createElement('p');
+    let paraNode = document.createElement('li');
+    
     let monsterWeaknessNode = document.createTextNode(`${monsterData.weaknesses[i].element} ${monsterData.weaknesses[i].stars}`);
     paraNode.appendChild(monsterWeaknessNode);
-    monsterWeakness.appendChild(paraNode);
-    let paraElement = document.querySelectorAll('.monster-weakness p');
-    console.log(paraElement)
+    monsterWeaknessUl.appendChild(paraNode);
+    let liElement = document.querySelectorAll('.monster-weakness-ul li')[i];
+    liElement.classList.add('monster-weakness-li');
+
+   
+
+    console.log(liElement)
   }
   
 

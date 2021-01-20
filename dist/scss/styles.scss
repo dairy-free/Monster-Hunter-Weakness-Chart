@@ -79,19 +79,16 @@ body {
 	}
 }
 
-.monster-weakness {
-	ul {
-		display: flex;
-		flex-direction: row;
-		padding: 0;
-		margin: 0;
-
-		li {
-			text-decoration: none;
-			list-style: none;
-			padding: 0;
-			padding-right: 0.5rem;
-			margin: 0;
-		}
-	}
+.monster-weakness-ul {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+.monster-weakness-li {
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	padding-right: 0.5rem;
+	margin: 0;
 }
