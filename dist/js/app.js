@@ -1,6 +1,7 @@
 const apiUrl = "https://mhw-db.com/monsters";
-let monster = `Anjanath`;
+let monster = `Odogaron`;
 let testMonsterName = [];
+const starEl = '<i class="fas fa-star"></i>';
 
 // Selectors 
 const monsterImage = document.querySelectorAll('.monster-image-lp')[0];
@@ -38,35 +39,36 @@ function updateMonsterData(monsterData) {
   // For loop for each weakness 
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
     let divEl = document.createElement('div');
-    let monsterWeaknessTextNode = document.createTextNode(`${monsterData.weaknesses[i].element} ${monsterData.weaknesses[i].stars}`);
-    // divEl.appendChild(monsterWeaknessTextNode);
+    divEl.classList.add('monster-weakness-content');
+    divEl.innerHTML = `
+          <ul class="monster-weakness-ul">
+            <li class="monster-weakness-li">${monsterData.weaknesses[i].element}</li>
+            <li class="monster-weakness-li stars"></li>
+          </ul>
+        </div>
+    `;
+    
     monsterWeaknessDiv.appendChild(divEl);
+    let stars = monsterWeaknessDiv.querySelectorAll('.stars')[i];
 
-    let div = monsterWeaknessDiv.getElementsByTagName('div')[i];
-    console.log(div);
+    if (monsterData.weaknesses[i].stars === 1) {
+      stars.innerHTML = `${starEl}`;
+    }
+    if (monsterData.weaknesses[i].stars === 2) {
+      stars.innerHTML = `${starEl}${starEl}`;
+    }
     
+    if (monsterData.weaknesses[i].stars === 3) {
+      stars.innerHTML = `${starEl}${starEl}${starEl}`;
+    }
+    if (monsterData.weaknesses[i].stars === 4) {
+      stars.innerHTML = `${starEl} ${starEl}${starEl}${starEl}`;
+    }
     
-
-
-    // divElement.classList.add('monster-weakness-content');
-    
-
-    // monsterData.weaknesses[i].stars
-    // let iNode = document.createElement('i');
-    // let monsterWeaknessINode = document.createTextNode(`${monsterData.weaknesses[i].stars}`);
-    // iNode.appendChild(monsterWeaknessINode);
-    // monsterWeaknessUl.appendChild(iNode);
-
-    // console.log(liElement)
-    // console.log(monsterData.weaknesses[i] , monsterData.weaknesses[i].stars )
+    if (monsterData.weaknesses[i].stars === 5) {
+      stars.innerHTML = `${starEl}${starEl}${starEl}${starEl}${starEl}`;
+    }
   }
-  
-
-  
-  // console.log(monsterData)
-  // console.log(monsterData.name)
-  // console.log(monsterData.weaknesses[0].element)
-  // console.log(monsterData.weaknesses[0].stars)
 }
 
 getMonster();
