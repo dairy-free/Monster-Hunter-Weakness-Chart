@@ -37,10 +37,10 @@ function updateMonsterData(monsterData) {
   
   // For loop for each weakness 
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
-    let divNode = document.createElement('div');
-    let monsterWeaknessElNode = document.createTextNode(`${monsterData.weaknesses[i].element}`);
-    divNode.appendChild(monsterWeaknessElNode);
-    monsterWeaknessDiv.appendChild(divNode);
+    let divEl = document.createElement('div');
+    let monsterWeaknessTextNode = document.createTextNode(`${monsterData.weaknesses[i].element} ${monsterData.weaknesses[i].stars}`);
+    // divEl.appendChild(monsterWeaknessTextNode);
+    monsterWeaknessDiv.appendChild(divEl);
 
     let div = monsterWeaknessDiv.getElementsByTagName('div')[i];
     console.log(div);
