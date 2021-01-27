@@ -1,6 +1,4 @@
 const apiUrl = "https://mhw-db.com/monsters";
-let monster = `Odogaron`;
-let testMonsterName = [];
 const starEl = '<i class="fas fa-star"></i>';
 
 // Selectors 
@@ -8,6 +6,11 @@ const monsterImage = document.querySelectorAll('.monster-image-lp')[0];
 const monsterName = document.querySelectorAll('.monster-name')[0];
 const monsterWeakness = document.querySelectorAll('.monster-weakness')[0];
 let monsterWeaknessDiv = document.querySelectorAll('.monster-weakness-container')[0];
+
+
+let monsterSessionName = localStorage.getItem('monsterName')
+let monster = `${monsterSessionName}`;
+console.log(monsterSessionName)
 
 
 async function getMonster() {
@@ -60,13 +63,6 @@ function updateMonsterData(monsterData) {
     
     if (monsterData.weaknesses[i].stars === 3) {
       stars.innerHTML = `${starEl}${starEl}${starEl}`;
-    }
-    if (monsterData.weaknesses[i].stars === 4) {
-      stars.innerHTML = `${starEl} ${starEl}${starEl}${starEl}`;
-    }
-    
-    if (monsterData.weaknesses[i].stars === 5) {
-      stars.innerHTML = `${starEl}${starEl}${starEl}${starEl}${starEl}`;
     }
   }
 }
