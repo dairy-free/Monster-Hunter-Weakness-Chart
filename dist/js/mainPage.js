@@ -17,13 +17,19 @@ function selectAllMonsters() {
 }
 selectAllMonsters()
 
-function getMonster() {
-  console.log('test');
+function getMonster(e) {
+  let testEvent = e.target;
+  let testEventValue = testEvent.innerHTML;
+  let monster = `${testEventValue}`;
+  // console.log(testEvent, monster)
+  localStorage.setItem('monsterName', `${monster}`)
 }
 
 
 
-// localStorage.setItem('monsterName', `${monsterName.innerHTML}`)
+
+
+
 
 
 
