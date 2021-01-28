@@ -18,10 +18,9 @@ function selectAllMonsters() {
 selectAllMonsters()
 
 function getMonster(e) {
-  let testEvent = e.target;
-  let testEventValue = testEvent.innerHTML;
-  let monster = `${testEventValue}`;
-  // console.log(testEvent, monster)
+  let monsterEvent = e.currentTarget;
+  let monsterEventValue = monsterEvent.children[1].children[0].children[0].innerHTML;
+  let monster = `${monsterEventValue}`;
   localStorage.setItem('monsterName', `${monster}`)
 }
 
