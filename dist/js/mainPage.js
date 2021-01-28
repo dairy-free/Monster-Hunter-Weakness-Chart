@@ -1,17 +1,29 @@
-let monsterContent = document.querySelectorAll('.monster-content')[1];
-
 let monster = ``;
-monsterContent.addEventListener('click', getMonster)
+
+function selectAllMonsters() {
+  let monsterName = document.getElementsByTagName('p').length;
+  
+  for (let i = 0; i < monsterName; i++){
+    // let monsterName = document.getElementsByTagName('p')[i];
+    let monsterContent = document.querySelectorAll('.monster-content')[i];
+    monsterContent.addEventListener('click', getMonster)
+    // console.log(monsterName)
+    
+  }
+
+
+  
+ 
+}
+selectAllMonsters()
 
 function getMonster() {
-  let monsterName = monsterContent.getElementsByTagName('p')[0];
-  console.log(monsterName.innerHTML)
-  localStorage.setItem('monsterName', `${monsterName.innerHTML}`)
+  console.log('test');
 }
 
-// console.log(monsterContent)
+
+
+// localStorage.setItem('monsterName', `${monsterName.innerHTML}`)
 
 
 
-
-// sessionStorage.setItem('monsterName', `${monster}`)
