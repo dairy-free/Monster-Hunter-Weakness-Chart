@@ -10,7 +10,6 @@ let monsterWeaknessDiv = document.querySelectorAll('.monster-weakness-container'
 
 let monsterSessionName = localStorage.getItem('monsterName')
 let monster = `${monsterSessionName}`;
-console.log(monsterSessionName)
 
 
 async function getMonster() {
@@ -43,13 +42,110 @@ function updateMonsterData(monsterData) {
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
     let divEl = document.createElement('div');
     divEl.classList.add('monster-weakness-content');
-    divEl.innerHTML = `
-          <ul class="monster-weakness-ul">
-            <li class="monster-weakness-li">${monsterData.weaknesses[i].element}</li>
-            <li class="monster-weakness-li stars"></li>
-          </ul>
-        </div>
+
+    if (monsterData.weaknesses[i].element === 'water') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/waterblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
     `;
+    }
+
+    if (monsterData.weaknesses[i].element === 'fire') {
+     divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/fireblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+
+    if (monsterData.weaknesses[i].element === 'thunder') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/thunderblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'ice') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/iceblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'dragon') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/dragonblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'poison') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/poison.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'sleep') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/sleep.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'paralysis') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/paralysis.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'blast') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/blastblight.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+    if (monsterData.weaknesses[i].element === 'stun') {
+      divEl.innerHTML =
+      `
+      <ul class="monster-weakness-ul">
+        <li class="monster-weakness-li"><img src="/images/blight-images/stun.png" alt="" class="blight-images">${monsterData.weaknesses[i].element}</li>
+        <li class="monster-weakness-li stars"></li>
+      </ul>
+    </div>
+    `;
+    }
+
     
     monsterWeaknessDiv.appendChild(divEl);
     let stars = monsterWeaknessDiv.querySelectorAll('.stars')[i];

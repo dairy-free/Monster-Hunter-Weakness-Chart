@@ -8,7 +8,7 @@ body {
   color: #daa520;
 }
 
-.search-bar-container {
+.navbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,19 +18,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
-.search-bar-container .form-control {
-  width: 60%;
-}
-
-.search-bar-container .fa-search {
+.navbar-container .fa-home {
   cursor: pointer;
   padding-right: 1rem;
+  padding-top: 2.5rem;
+  color: #00134d;
 }
 
 .monster-images {
@@ -109,5 +103,11 @@ body {
 
 .monster-weakness-content .monster-weakness-ul .monster-weakness-li {
   list-style-type: none;
+  width: 45%;
+  padding-bottom: 0.5rem;
+}
+
+.blight-images {
+  width: 25%;
 }
 /*# sourceMappingURL=styles.css.map */

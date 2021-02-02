@@ -9,22 +9,16 @@ body {
 	color: #daa520;
 }
 
-.search-bar-container {
+.navbar-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
 
-	.form-control {
-		width: 60%;
-	}
-
-	.fa-search {
+	.fa-home {
 		cursor: pointer;
 		padding-right: 1rem;
+		padding-top: 2.5rem;
+		color: #00134d;
 	}
 }
 
@@ -92,6 +86,12 @@ body {
 
 		.monster-weakness-li {
 			list-style-type: none;
+			width: 45%;
+			padding-bottom: 0.5rem;
 		}
 	}
+}
+
+.blight-images {
+	width: 25%;
 }
