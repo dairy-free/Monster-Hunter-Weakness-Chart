@@ -35,10 +35,10 @@ async function getMonster() {
 
 
 function updateMonsterData(monsterData) {
-  monsterImage.innerHTML = `<a href="#"><img src="./images/MHW_${monster}_Icon.png" alt="" class="monster-image monster-lp-image"></a>`;
+  monsterImage.innerHTML = `<a href="#"><img src="./images/MHW_${monster}_Icon.png" alt="" class="monster-image monster-image-lp"></a>`;
   monsterName.innerHTML = `${monsterData.name}`;
   
-  // For loop for each weakness 
+  //  loop for each weakness a monster has
   for (let i = 0; i < monsterData.weaknesses.length; i++) {
     let divEl = document.createElement('div');
     divEl.classList.add('monster-weakness-content');
@@ -146,7 +146,7 @@ function updateMonsterData(monsterData) {
     `;
     }
 
-    
+    // Amount of weakness stars given for each monster
     monsterWeaknessDiv.appendChild(divEl);
     let stars = monsterWeaknessDiv.querySelectorAll('.stars')[i];
 
